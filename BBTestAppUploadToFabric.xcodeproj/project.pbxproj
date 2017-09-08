@@ -17,6 +17,8 @@
 
 /* Begin PBXFileReference section */
 		14A87F590522797EFDBAE4FC /* Pods_BBTestAppUploadToFabric.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BBTestAppUploadToFabric.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A8997E31F62DA22004E428C /* Config-Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Debug.xcconfig"; sourceTree = "<group>"; };
+		7A8997E41F62DABB004E428C /* Config-Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Config-Release.xcconfig"; sourceTree = "<group>"; };
 		7AA3A0C21F62D3D5005D080D /* BBTestAppUploadToFabric.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BBTestAppUploadToFabric.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AA3A0C51F62D3D5005D080D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AA3A0C71F62D3D5005D080D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,12 +63,14 @@
 		7AA3A0C41F62D3D5005D080D /* BBTestAppUploadToFabric */ = {
 			isa = PBXGroup;
 			children = (
+				7A8997E41F62DABB004E428C /* Config-Release.xcconfig */,
 				7AA3A0C51F62D3D5005D080D /* AppDelegate.swift */,
 				7AA3A0C71F62D3D5005D080D /* ViewController.swift */,
 				7AA3A0C91F62D3D5005D080D /* Main.storyboard */,
 				7AA3A0CC1F62D3D5005D080D /* Assets.xcassets */,
 				7AA3A0CE1F62D3D5005D080D /* LaunchScreen.storyboard */,
 				7AA3A0D11F62D3D5005D080D /* Info.plist */,
+				7A8997E31F62DA22004E428C /* Config-Debug.xcconfig */,
 			);
 			path = BBTestAppUploadToFabric;
 			sourceTree = "<group>";
@@ -190,7 +194,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "printenv\n\n${PODS_ROOT}/Fabric/run $(FABRIC_API_KEY) $(FABRIC_BUILD_SECRET)";
+			shellScript = "echo \"Fabric key:\"\necho ${FABRIC_API_KEY}\necho \"Fabric Secret:\"\necho ${FABRIC_BUILD_SECRET}\n\nif [[ ! -z \"$FABRIC_BUILD_SECRET\" ]] && [[ ! -z \"$FABRIC_API_KEY\" ]]; then\n    echo \"Running Fabric.\"\n    ${PODS_ROOT}/Fabric/run a321561bfe97c813dc75de82b4c30b112e1feaaf 9427819e62c2284a13bcc8171351fcf56c3b4314a292fc5456f1e354a5029362\nelse\n    echo \"Not running Fabric.\"\nfi";
 		};
 		F203E168CCF22377170B9D86 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -353,7 +357,7 @@
 		};
 		7AA3A0D51F62D3D5005D080D /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = DAED0080DB9E99D997BFB35D /* Pods-BBTestAppUploadToFabric.debug.xcconfig */;
+			baseConfigurationReference = 7A8997E31F62DA22004E428C /* Config-Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8VS9JKFDZS;
@@ -371,7 +375,7 @@
 		};
 		7AA3A0D61F62D3D5005D080D /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7215895F9A38626D078554F /* Pods-BBTestAppUploadToFabric.release.xcconfig */;
+			baseConfigurationReference = 7A8997E41F62DABB004E428C /* Config-Release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 8VS9JKFDZS;

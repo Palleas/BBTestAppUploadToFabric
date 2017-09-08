@@ -35,3 +35,4 @@ xcuserdata/
 *.xcscmblueprint
 
 # End of https://www.gitignore.io/api/xcode,cocoapods
+BBTestAppUploadToFabric/Keys.xcconfig
