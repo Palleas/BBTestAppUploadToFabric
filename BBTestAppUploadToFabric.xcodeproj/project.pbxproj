@@ -190,7 +190,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "printenv\n\n${PODS_ROOT}/Fabric.framework/run $(FABRIC_API_KEY) $(FABRIC_BUILD_SECRET)";
+			shellScript = "printenv\n\n${PODS_ROOT}/Fabric/run $(FABRIC_API_KEY) $(FABRIC_BUILD_SECRET)";
 		};
 		F203E168CCF22377170B9D86 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
