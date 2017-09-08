@@ -103,9 +103,9 @@
 				7AA3A0BE1F62D3D5005D080D /* Sources */,
 				7AA3A0BF1F62D3D5005D080D /* Frameworks */,
 				7AA3A0C01F62D3D5005D080D /* Resources */,
-				7AA3A0D71F62D4D6005D080D /* ShellScript */,
 				F203E168CCF22377170B9D86 /* [CP] Embed Pods Frameworks */,
 				FFDABB53BA561605919454F2 /* [CP] Copy Pods Resources */,
+				7AA3A0D71F62D4D6005D080D /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -360,6 +360,7 @@
 			baseConfigurationReference = 7A8997E31F62DA22004E428C /* Config-Debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = 8VS9JKFDZS;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
